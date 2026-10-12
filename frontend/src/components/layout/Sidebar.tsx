@@ -1,8 +1,8 @@
 import React from 'react';
 import { useI18n } from '../../context/I18nContext';
-import { LayoutDashboard, MapPin, Navigation, Smartphone, Users, ChevronRight } from 'lucide-react';
+import { LayoutDashboard, MapPin, Navigation, Smartphone, Users, ChevronRight, PhoneCall, TrendingUp } from 'lucide-react';
 
-export type NavTab = 'dashboard' | 'objects' | 'roads' | 'inspector' | 'contractors';
+export type NavTab = 'dashboard' | 'appeals' | 'risk' | 'objects' | 'roads' | 'inspector' | 'contractors';
 
 interface SidebarProps {
   currentTab: NavTab;
@@ -14,6 +14,8 @@ export const Sidebar: React.FC<SidebarProps> = ({ currentTab, onSelectTab }) => 
 
   const navItems = [
     { id: 'dashboard', label: t.nav.dashboard, icon: LayoutDashboard },
+    { id: 'appeals', label: 'Приём обращений (109+)', icon: PhoneCall, badge: 'ИИ' },
+    { id: 'risk', label: 'Прогноз рисков', icon: TrendingUp, badge: 'ML' },
     { id: 'objects', label: t.nav.objects, icon: MapPin },
     { id: 'roads', label: t.nav.roads, icon: Navigation },
     { id: 'inspector', label: t.nav.inspector, icon: Smartphone, highlight: true },
@@ -45,9 +47,13 @@ export const Sidebar: React.FC<SidebarProps> = ({ currentTab, onSelectTab }) => 
                     isActive ? 'text-sky-600 dark:text-sky-400' : 'text-slate-400 dark:text-slate-500'
                   }`}
                 />
-                <span>{item.label}</span>
+                <span className="truncate">{item.label}</span>
               </div>
-              {item.highlight ? (
+              {item.badge ? (
+                <span className="text-[10px] font-black uppercase tracking-wider px-1.5 py-0.5 rounded bg-sky-100 dark:bg-sky-950 text-sky-700 dark:text-sky-300">
+                  {item.badge}
+                </span>
+              ) : item.highlight ? (
                 <span className="text-[10px] font-bold uppercase tracking-wider px-1.5 py-0.5 rounded bg-emerald-100 dark:bg-emerald-950 text-emerald-700 dark:text-emerald-300">
                   PWA
                 </span>

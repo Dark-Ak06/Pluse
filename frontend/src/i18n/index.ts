@@ -2,9 +2,9 @@ export type Language = 'ru' | 'kk';
 
 export const translations = {
   ru: {
-    appName: "RegionControl",
-    appSubname: "Единая система контроля инфраструктуры и дорог",
-    regionName: "Сарыарқа облысы",
+    appName: "RegionPulse",
+    appSubname: "Единый центр управления обращениями и рисками региона",
+    regionName: "Бостандыкский район (Алматы)",
     demoBanner: "ДЕМОНСТРАЦИОННЫЕ ДАННЫЕ — Все совпадения с реальными проектами условны",
     nav: {
       dashboard: "Контроль региона",
@@ -96,9 +96,9 @@ export const translations = {
     }
   },
   kk: {
-    appName: "RegionControl",
-    appSubname: "Инфрақұрылым мен облыс жолдарын бірыңғай бақылау жүйесі",
-    regionName: "Сарыарқа облысы",
+    appName: "RegionPulse",
+    appSubname: "Өңірдегі өтініштер мен тәуекелдерді басқарудың бірыңғай орталығы",
+    regionName: "Бостандық ауданы (Алматы)",
     demoBanner: "ДЕМОНСТРАЦИЯЛЫҚ ДЕРЕКТЕР — Нақты нысандармен сәйкестіктер шартты",
     nav: {
       dashboard: "Өңірді бақылау",

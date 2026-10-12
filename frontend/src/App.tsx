@@ -9,14 +9,30 @@ import { ObjectsPage } from './pages/ObjectsPage';
 import { RoadsPage } from './pages/RoadsPage';
 import { InspectorAppPage } from './pages/InspectorAppPage';
 import { ContractorsPage } from './pages/ContractorsPage';
+import { AppealsIntakePage } from './pages/AppealsIntakePage';
+import { TerritoryRiskPage } from './pages/TerritoryRiskPage';
 import { AiSearchModal } from './components/assistant/AiSearchModal';
 import { AiSummaryModal } from './components/assistant/AiSummaryModal';
 import { LayoutDashboard, MapPin, Navigation, Smartphone, Users } from 'lucide-react';
 
 const AppContent: React.FC = () => {
-  const [currentTab, setCurrentTab] = useState<NavTab>('dashboard');
+  const getInitialTab = (): NavTab => {
+    const params = new URLSearchParams(window.location.search);
+    const tab = params.get('tab') as NavTab;
+    const validTabs: NavTab[] = ['dashboard', 'appeals', 'risk', 'objects', 'roads', 'inspector', 'contractors'];
+    return validTabs.includes(tab) ? tab : 'dashboard';
+  };
+
+  const [currentTab, setCurrentTabState] = useState<NavTab>(getInitialTab);
   const [isAiSearchOpen, setIsAiSearchOpen] = useState(false);
   const [isAiSummaryOpen, setIsAiSummaryOpen] = useState(false);
+
+  const setCurrentTab = (tab: NavTab) => {
+    setCurrentTabState(tab);
+    const url = new URL(window.location.href);
+    url.searchParams.set('tab', tab);
+    window.history.replaceState(null, '', url.toString());
+  };
 
   return (
     <div className="min-h-screen bg-slate-50 dark:bg-slate-950 flex flex-col font-sans transition-colors duration-200">
@@ -25,7 +41,7 @@ const AppContent: React.FC = () => {
       <div className="flex-1 flex overflow-hidden">
         <Sidebar currentTab={currentTab} onSelectTab={setCurrentTab} />
 
-        <main className="flex-1 overflow-y-auto px-4 sm:px-8 py-6 max-w-7xl mx-auto w-full">
+        <main className="flex-1 overflow-y-auto px-4 sm:px-6 py-3 w-full">
           {currentTab === 'dashboard' && (
             <DashboardPage
               onOpenAiSummary={() => setIsAiSummaryOpen(true)}
@@ -34,6 +50,8 @@ const AppContent: React.FC = () => {
               onNavigateToInspector={() => setCurrentTab('inspector')}
             />
           )}
+          {currentTab === 'appeals' && <AppealsIntakePage />}
+          {currentTab === 'risk' && <TerritoryRiskPage />}
           {currentTab === 'objects' && <ObjectsPage />}
           {currentTab === 'roads' && <RoadsPage />}
           {currentTab === 'inspector' && <InspectorAppPage />}
