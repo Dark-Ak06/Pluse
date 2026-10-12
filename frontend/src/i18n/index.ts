@@ -1,0 +1,192 @@
+export type Language = 'ru' | 'kk';
+
+export const translations = {
+  ru: {
+    appName: "RegionControl",
+    appSubname: "Единая система контроля инфраструктуры и дорог",
+    regionName: "Сарыарқа облысы",
+    demoBanner: "ДЕМОНСТРАЦИОННЫЕ ДАННЫЕ — Все совпадения с реальными проектами условны",
+    nav: {
+      dashboard: "Контроль региона",
+      objects: "Единая карта объектов",
+      roads: "Дороги области",
+      inspector: "Экран инспектора (PWA)",
+      contractors: "Дисциплина подрядчиков",
+      assistant: "ИИ-Помощник"
+    },
+    roles: {
+      akim: "Аким области",
+      head: "Руководитель управления",
+      curator: "Ответственный за объект",
+      inspector: "Дорожный инспектор",
+      contractor: "Подрядная организация"
+    },
+    dashboard: {
+      title: "Панель управления Акима",
+      subtitle: "Сводные показатели инфраструктуры и состояния дорожной сети за 1 минуту",
+      aiSummaryBtn: "Сформировать сводку ИИ",
+      kpiObjectsTitle: "Объекты в работе",
+      kpiOnSchedule: "в графике",
+      kpiDelayed: "отставание",
+      kpiFreshness: "Актуальность статусов",
+      kpiRoadsCoverage: "Покрытие сети за месяц",
+      kpiDefectsOnTime: "Устранение дефектов в срок",
+      kpiHandoverSpeed: "Среднее время передачи",
+      topLaggingTitle: "Топ-5 отстающих объектов",
+      topContractorsTitle: "Топ проблемных подрядчиков",
+      systemicBadge: "СИСТЕМНЫЙ СБОЙ",
+      districtsTitle: "Распределение по районам",
+      stagesTitle: "Воронка жизненного цикла"
+    },
+    objects: {
+      title: "Реестр инфраструктурных объектов",
+      subtitle: "127 проектов с автоматическим контролем срывов графиков и вех",
+      filterAll: "Все районы",
+      filterStage: "Стадия",
+      filterLagOnly: "Только с отставанием",
+      filterFreshness: "Не обновлялись >14 дн",
+      searchPlaceholder: "Поиск по названию или коду...",
+      exportExcel: "Экспорт Excel",
+      exportPdf: "Официальный PDF",
+      importCsv: "Импорт CSV",
+      updateStatusBtn: "Обновить статус",
+      thresholdsBtn: "Настройка порогов",
+      linkedDefectsTitle: "Связанные дорожные дефекты на участке"
+    },
+    inspector: {
+      title: "Приложение дорожного инспектора",
+      subtitle: "Фиксация дефекта в 3 действия с мобильного телефона",
+      step1: "1. Фото дефекта с камеры",
+      step2: "2. Тип и серьезность",
+      step3: "3. Геопозиция и отправка",
+      captureBtn: "Сделать фото",
+      photoSelected: "Фото зафиксировано",
+      typePothole: "Яма / Выбоина",
+      typeCrack: "Трещины / Колея",
+      typeMarkings: "Разметка",
+      typeSignage: "Знаки / Указатели",
+      typeBarrier: "Ограждения",
+      typeOther: "Прочее",
+      severityEmergency: "Аварийная (24ч)",
+      severityHigh: "Высокая (48ч)",
+      severityMedium: "Средняя (5 дней)",
+      severityLow: "Низкая (10 дней)",
+      gpsStatus: "Геолокация определена с точностью 4.2 м",
+      gpsConsent: "Согласие на фиксацию координат в рабочее время получено",
+      submitBtn: "Отправить подрядчику",
+      handoverSuccess: "Дефект передан подрядчику!",
+      handoverMetric: "Время передачи: 1.2 мин (цель < 5 мин)",
+      aiClassifyBtn: "Автоопределение по тексту"
+    },
+    roads: {
+      title: "Дорожная сеть области",
+      subtitle: "1 588 км областных дорог, 20 трасс, контроль покрытия сети",
+      coverageKpi: "Осмотрено за месяц",
+      targetKpi: "Цель KPI: 100% за месяц",
+      uninspectedAlert: "Непокрытые участки требуют выезда инспектора"
+    },
+    contractors: {
+      title: "Рейтинг дисциплины подрядных организаций",
+      subtitle: "Сквозной учет срывов сроков по объектам ремонта и дорожным дефектам",
+      systemicTitle: "Выявлены системные сбои подрядчиков",
+      systemicDesc: "Подрядчики, срывающие сроки строительства и ремонта, одновременно задерживают устранение ям на своих участках.",
+      scoreColumn: "Балл дисциплины",
+      projectsColumn: "Объекты (всего / срыв)",
+      defectsColumn: "Дефекты (всего / просрочено)"
+    }
+  },
+  kk: {
+    appName: "RegionControl",
+    appSubname: "Инфрақұрылым мен облыс жолдарын бірыңғай бақылау жүйесі",
+    regionName: "Сарыарқа облысы",
+    demoBanner: "ДЕМОНСТРАЦИЯЛЫҚ ДЕРЕКТЕР — Нақты нысандармен сәйкестіктер шартты",
+    nav: {
+      dashboard: "Өңірді бақылау",
+      objects: "Нысандардың бірыңғай картасы",
+      roads: "Облыс жолдары",
+      inspector: "Инспектор экраны (PWA)",
+      contractors: "Мердігерлер тәртібі",
+      assistant: "ЖИ-Көмекші"
+    },
+    roles: {
+      akim: "Облыс әкімі",
+      head: "Басқарма басшысы",
+      curator: "Нысан кураторы",
+      inspector: "Жол инспекторы",
+      contractor: "Мердігер ұйым"
+    },
+    dashboard: {
+      title: "Әкімнің басқару тақтасы",
+      subtitle: "Инфрақұрылым мен жол желісінің 1 минуттағы жиынтық көрсеткіштері",
+      aiSummaryBtn: "ЖИ есебін қалыптастыру",
+      kpiObjectsTitle: "Жұмыстағы нысандар",
+      kpiOnSchedule: "кесте бойынша",
+      kpiDelayed: "кешігуде",
+      kpiFreshness: "Мәртебенің өзектілігі",
+      kpiRoadsCoverage: "Айлық тексеру көлемі",
+      kpiDefectsOnTime: "Ақауларды уақытылы жою",
+      kpiHandoverSpeed: "Мердігерге беру уақыты",
+      topLaggingTitle: "Кешігіп жатқан ТОП-5 нысан",
+      topContractorsTitle: "Мәселелі ТОП мердігерлер",
+      systemicBadge: "ЖҮЙЕЛІ БҰЗУШЫЛЫҚ",
+      districtsTitle: "Аудандар бойынша бөлініс",
+      stagesTitle: "Өмірлік цикл кезеңдері"
+    },
+    objects: {
+      title: "Инфрақұрылымдық нысандар тізілімі",
+      subtitle: "127 жоба және автоматты кешігу белгілері",
+      filterAll: "Барлық аудандар",
+      filterStage: "Кезең",
+      filterLagOnly: "Тек кешігу бар",
+      filterFreshness: "Жаңартылмаған >14 күн",
+      searchPlaceholder: "Атауы немесе коды бойынша іздеу...",
+      exportExcel: "Excel экспорт",
+      exportPdf: "Ресми PDF",
+      importCsv: "CSV импорт",
+      updateStatusBtn: "Мәртебені жаңарту",
+      thresholdsBtn: "Шектерді баптау",
+      linkedDefectsTitle: "Учаскедегі байланысты жол ақаулары"
+    },
+    inspector: {
+      title: "Жол инспекторының қосымшасы",
+      subtitle: "Телефоннан 3 қадамда ақауды тіркеу",
+      step1: "1. Камерадан фото түсіру",
+      step2: "2. Түрі және қауіптілігі",
+      step3: "3. Геопозиция және жіберу",
+      captureBtn: "Фото түсіру",
+      photoSelected: "Фото тіркелді",
+      typePothole: "Шұңқыр / Ойық",
+      typeCrack: "Жарықтар / Іздер",
+      typeMarkings: "Таңбалау",
+      typeSignage: "Белгілер",
+      typeBarrier: "Қоршаулар",
+      typeOther: "Басқа",
+      severityEmergency: "Апатты (24 сағ)",
+      severityHigh: "Жоғары (48 сағ)",
+      severityMedium: "Орташа (5 күн)",
+      severityLow: "Төмен (10 күн)",
+      gpsStatus: "Геолокация 4.2 м дәлдікпен анықталды",
+      gpsConsent: "Жұмыс уақытында координаттарды жазуға келісім алынды",
+      submitBtn: "Мердігерге жолдау",
+      handoverSuccess: "Ақау мердігерге берілді!",
+      handoverMetric: "Беру уақыты: 1.2 мин (мақсат < 5 мин)",
+      aiClassifyBtn: "Мәтін бойынша анықтау"
+    },
+    roads: {
+      title: "Облыс жол желісі",
+      subtitle: "1 588 км облыстық жолдар, 20 трасса",
+      coverageKpi: "Ай ішінде тексерілген",
+      targetKpi: "KPI мақсаты: айына 100%",
+      uninspectedAlert: "Тексерілмеген учаскелер инспектордың баруын талап етеді"
+    },
+    contractors: {
+      title: "Мердігерлік ұйымдардың тәртіп рейтингі",
+      subtitle: "Жөндеу нысандары мен жол шұңқырлары бойынша мерзім бұзуды кешенді есепке алу",
+      systemicTitle: "Жүйелі бұзушылықтар анықталды",
+      systemicDesc: "Құрылыс мерзімін бұзған мердігерлер бір мезгілде жол шұңқырларын жоюды да созып жіберуде.",
+      scoreColumn: "Тәртіп балы",
+      projectsColumn: "Нысандар (барлығы / кешігу)",
+      defectsColumn: "Ақаулар (барлығы / мерзімі өткен)"
+    }
+  }
+};

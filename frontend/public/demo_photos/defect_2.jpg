@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="250" viewBox="0 0 400 250">
+  <rect width="400" height="250" fill="#1e293b"/>
+  <rect x="10" y="10" width="380" height="230" rx="12" fill="#0f172a" stroke="#334155" stroke-width="2"/>
+  <circle cx="200" cy="95" r="45" fill="#f59e0b" opacity="0.2"/>
+  <path d="M170 95 Q 200 65 230 95 T 200 125 Z" fill="#f59e0b"/>
+  <text x="200" y="165" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#f8fafc" text-anchor="middle">Дорожный дефект #2</text>
+  <text x="200" y="190" font-family="Arial, sans-serif" font-size="12" fill="#94a3b8" text-anchor="middle">Сетка трещин и просадка полотна</text>
+  <text x="200" y="215" font-family="monospace" font-size="10" fill="#38bdf8" text-anchor="middle">GPS: 53.2500° N, 69.2000° E • 2026-10</text>
+</svg>
